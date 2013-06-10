@@ -10,7 +10,7 @@ using namespace std;
 class Tree
 {
 	int lvl;		//Уровень дерева
-	int right_key,	//Правый ключ
+	int right_key,		//Правый ключ
 		left_key,	//Левый ключ
 		m_Count;	//Количество элементов
 	int *top;		//Массив под дерево
@@ -28,7 +28,7 @@ public:
 		//Заполнение дерева
 	{
 		full=false;
-		cout << "Как много рядов вы хотите добавить: ";
+		cout << "Как много ветвей вы хотите добавить: ";
 		int c;
 		cin >> c;
 
@@ -39,7 +39,7 @@ public:
 		lvl=lv;
 		top=new int[max_count];
 
-		cout << "Введите ряды: " << endl;
+		cout << "Введите ветвь: " << endl;
 		for (int i=0; i<m_Count; i++)
 			cin >> top[i];
 
@@ -48,7 +48,7 @@ public:
 	}
 
 	int Check() 
-		//Проверяем ряд на полноту
+		//Проверяем ветвь на полноту
 	{
 		if (full)
 		{
@@ -152,7 +152,7 @@ int main()
 	for (int i=0; i<lvl_number; i++)
 	{
 		//Заполняем уровни
-		cout<<"Уровень "<< i <<". Включает ряды: "<<endl;
+		cout<<"Уровень "<< i <<". Включает ветви: "<<endl;
 		int k;
 		k = pow(2.0,i);
 		B[i].Fill(i, k);
